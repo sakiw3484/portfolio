@@ -16,14 +16,13 @@
   width: 100%;
   height: 100vh;
   background-color: #000000;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: azure;
+  color: beige;
   text-align: center;
   font-size: 30px;
   font-family: 'Courier New', monospace;
@@ -35,7 +34,7 @@
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  object-fit: cover; /* ensures the image fills the circle */
+  object-fit: cover;
 }
 
 
@@ -183,21 +182,40 @@
   margin-top: 100vh;
   background: beige;
   border-radius: 30px;
-  padding: 100px 20px;
+  padding: 20px 20px;
   min-height: 200vh;
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.4);
 }
 
 
-.project-content{
+.AboutMe-content{
   position: relative;
-  background: beige;
+  background: rgb(5, 5, 5);
+  color: beige;
   z-index: 2;
-  padding: 100px 20px;
-  min-height: 200vh;
+  padding: 20px 20px;
+  min-height: 50vh;
   transform: transform 0.3s ease-in-out;
 
+  border-radius: 30px;
+  box-shadow: 0px -10px 10px rgba(9, 2, 2, 0.4);
+
 }
+
+.Projects-content{
+  position: relative;
+  background: rgb(5, 5, 5);
+  color: beige;
+  z-index: 2;
+  padding: 20px 20px;
+  min-height: 50vh;
+  transform: transform 0.3s ease-in-out;
+  border: 2px solid #004214;
+  border-radius: 30px;
+  box-shadow: 0px -10px 10px rgba(9, 2, 2, 0.4);
+}
+
+
 
 
 
@@ -213,6 +231,50 @@
       document.body.classList.remove('scrolled');
     }
   });
+
+  // Typewriter effect function
+    function startTypewriter() {
+      const lines = document.querySelectorAll('.typewriter-line');
+      const buttons = document.querySelectorAll('.button-49');
+
+      function typeLine(index) {
+        if (index < lines.length) {
+          lines[index].classList.add('typing');
+
+          // Calculate typing duration based on text length
+          const textLength = lines[index].textContent.length;
+          const typingDuration = textLength * 100; // 100ms per character
+
+          setTimeout(() => {
+            // Remove cursor from current line
+            lines[index].style.animation = 'none';
+            lines[index].style.borderRight = 'none';
+
+            // Start next line after a brief pause
+            setTimeout(() => {
+              typeLine(index + 1);
+            }, 500);
+          }, typingDuration);
+        } else {
+          // All lines typed, show buttons
+          setTimeout(() => {
+            buttons.forEach((btn, i) => {
+              setTimeout(() => {
+                btn.classList.add('show');
+              }, i * 200);
+            });
+          }, 1000);
+        }
+      }
+
+      // Start typing after page loads
+      setTimeout(() => {
+        typeLine(0);
+      }, 1000);
+    }
+
+    // Start the typewriter effect when page loads
+    window.addEventListener('load', startTypewriter);
 </script>
 </head>
 <body>
@@ -233,9 +295,15 @@
   
 
     <section class="projects">
-      <div class="project-content">
-        <h2>My Projects</h2>
-        <p>Project details go here...</p>
+      <div class="AboutMe-content">
+        <h2>About Me...</h2>
+        <p>Hi I'm Sakiyah WInston</p>
+      </div>
+      <br>
+      <br>
+      <div class="Projects-content">
+        <h2>Projects...</h2>
+        <p>List of projects or project details go here...</p>
       </div>
     </section>
 
