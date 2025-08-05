@@ -38,53 +38,17 @@
   object-fit: cover;
 }
 
-        .typewriter-container{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 25px;
-  text-align: center;
-  padding: 20px 0px 20px 0px;
-        }
 
-        .typewriter-line{
-          overflow: hidden;
-          white-space: nowrap;
-          margin: 0 auto;
-          letter-spacing: .15em;
-          opacity: 0;
+        #typewriter-container {
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 20px;
+          display: inline;
+          color: beige;
+          position: relative;
 
         }
 
-
-        .typewriter-line.typing{
-          opacity: 1;
-          animation: typing 3s steps(30, end) forwards;
-        }
-
-        .typewriter-line.typing::after {
-          content: '';
-          border-right: .15em soild orange;
-          animation: blink-caret .75s step-end infinite;
-        }
-
-        .about-line{
-          
-        }
-
-        /* typing effect*/
-        @keyframes typing {
-          from {width: 0}
-          to {width: 100%;}
-          
-        }
-
-        @keyframes blink-caret {
-          from, to {border-color: transparent}
-          50% {border-color:#c3dfbe}
-          
-        }
-
-
-
+        
 
 
   
@@ -248,10 +212,14 @@
   <section class="hero">
     <img src="imgs/IMG_4522.JPG" alt="Profile picture" class="pfp">
 
-    <div class="typewriter-container">
-      <div class="typewriter-line" id="line1">Hi, I'm Sakiyah Winston.</div>
-      <div class="typewriter-line abouut-line" id="line2"> Senior Universty Student | Frontend Developer | Artificial Intelligence Enthusiast</div>
-    </div>
+    <div id="typewriter-container"> 
+    <p>
+     Hi, I'm Saki
+    </p>  
+    <p>
+      Computer Sciecne student | Frontend Devloper | AI enthuisits
+    </p>
+  </div>
 
     <div class="buttonsabout">
       <button class="button-49">About Me</button>
@@ -264,7 +232,7 @@
     <section class="projects">
       <div class="AboutMe-content">
         <h2>About Me...</h2>
-        <p>Hi I'm Sakiyah WInston</p>
+        <p>Hi I'm Sakiyah </p>
       </div>
       <br>
       <br>
@@ -276,47 +244,7 @@
 
 
     <script>
-    // Typewriter effect for the hero section 
-    function startTypewriter(){
-      const lines = document.querySelectorAll('.typewriter-line')
-
-      function typeLine(index) {
-        if (index < lines.length) {
-          //go to line that needs to be typed
-          lines[index].classList.add('typing');
-
-          //cacluate tpying duration
-          const textLength = lines[index].textContent.length;
-          const typingDuration = textLength *200; //100ms per char
-
-          setTimeout(() => {
-            //remove cursor from current line
-            lines[index].style.animation ="none";
-            lines[index].style.borderRight ="none";
-
-            //start next line after pause
-            setTimeout(() => {
-              typeLine(index + 1);
-            }, 500);
-            }, typingDuration)
-          }
-      }
-      setTimeout(() => {
-        typeLine(0);
-      }, 1000);
-
-    }
-    window.addEventListener('load', startTypewriter);
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
