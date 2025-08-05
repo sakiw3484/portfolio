@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+            overflow-x: hidden;
+        } 
+
+        #user-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #862a2a;
+            border-radius: 5px;
+        }
+
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+    </div>
+
+    <div id="chatbot">
+        <div id="chat-log"></div>
+        <input type="text" id="user-input" placeholder="Ask me anything..." />
+        <button onclick="sendMessage()">Send</button>
+     </div>
+    
+
+     <script>
+        async function sendMessage() {
+                const input = document.getElementById("user-input");
+                const message = input.value.trim();
+                if (!message) return;
+
+                addMessage("You", message);
+                input.value = "";
+
+                const response = await fetch("/api/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ prompt: message }),
+                });
+
+                const data = await response.json();
+                addMessage("SakiyahBot", data.reply);
+            }
+
+            function addMessage(sender, text) {
+                const chatLog = document.getElementById("chat-log");
+                const msg = document.createElement("div");
+                msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+                chatLog.appendChild(msg);
+                chatLog.scrollTop = chatLog.scrollHeight;
+            }
+     </script>
+</body>
+</html>
