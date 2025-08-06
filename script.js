@@ -35,5 +35,5 @@ async function sendMessage() {
       });
 
       document.querySelectorAll('.button-49')[2].addEventListener('click', function() {
-        window.location.href = 'path/to/your/resume.pdf'; // Update with your resume path
+        window.location.href = 'path/to/your/resume.pdf'; // Update with resume path
       });
