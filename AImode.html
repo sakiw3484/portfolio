@@ -68,6 +68,10 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
+        .back-button:active {
+            transform: translateY(-50%) translateX(0);
+        }
+
         .chat-header h1 {
             font-size: 24px;
             font-weight: 600;
@@ -378,6 +382,7 @@
             margin: 40px 0;
         }
 
+        /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .chat-container {
                 width: 100%;
@@ -385,8 +390,101 @@
                 border-radius: 0;
             }
 
+            .chat-header {
+                padding: 15px;
+            }
+
+            .chat-header h1 {
+                font-size: 20px;
+                margin-bottom: 3px;
+            }
+
+            .chat-header p {
+                font-size: 12px;
+            }
+
+            .back-button {
+                left: 15px;
+                padding: 8px 10px;
+                font-size: 14px;
+                gap: 6px;
+                border-radius: 8px;
+            }
+
+            .back-button span:last-child {
+                display: none; /* Hide "Back" text on mobile, keep only arrow */
+            }
+
             .message-content {
                 max-width: 85%;
+                padding: 12px 16px;
+            }
+
+            .message-avatar {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+
+            .chat-messages {
+                padding: 15px;
+            }
+
+            .chat-input-container {
+                padding: 15px;
+            }
+
+            .chat-input {
+                font-size: 16px;
+                padding: 12px 16px;
+            }
+
+            .send-button {
+                padding: 10px 16px;
+                margin: 6px;
+                font-size: 14px;
+            }
+
+            .quick-questions {
+                padding: 12px 15px;
+            }
+
+            .quick-questions-title {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+
+            .quick-question {
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+        }
+
+        /* Extra small mobile devices */
+        @media (max-width: 480px) {
+            .chat-header {
+                padding: 12px;
+            }
+
+            .chat-header h1 {
+                font-size: 18px;
+            }
+
+            .back-button {
+                left: 10px;
+                padding: 6px 8px;
+                font-size: 16px;
+                min-width: 40px;
+                justify-content: center;
+            }
+
+            .message-content {
+                max-width: 90%;
+                padding: 10px 14px;
+            }
+
+            .chat-input {
+                font-size: 16px; /* Prevents zoom on iOS */
             }
         }
 
@@ -397,7 +495,10 @@
 <body>
     <div class="chat-container">
         <div class="chat-header">
-            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+            <button class="back-button" onclick="window.location.href='index.html'">
+                <span>←</span>
+                <span>Back</span>
+            </button>            
             <div class="status-indicator"></div>
             <h1>Sakiyah's AI Resume</h1>
             <p>Powered by a Large Language Model</p>
