@@ -93,7 +93,7 @@
       margin-bottom: 20px;
     }
 
-    #typewriter-container {
+    #intro-container {
       font-family: 'Courier New', Courier, monospace;
       font-size: 20px;
       display: inline;
@@ -254,7 +254,7 @@
     }
 
     .section h2 {
-      color: #4f9b66;
+      color: beige;
       font-size: 32px;
       margin-bottom: 20px;
       text-align: center;
@@ -292,7 +292,7 @@
     }
 
     .skill-item:hover {
-      background: #4f9b66;
+      background: #205a31;
       transform: scale(1.05);
     }
 
@@ -312,14 +312,14 @@
     }
 
     .project-card:hover {
-      border-color: #4f9b66;
+      border-color: beige;
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(79, 155, 102, 0.2);
     }
 
     .project-title {
-      color: #4f9b66;
-      font-size: 20px;
+      color: #004214;
+      font-size: 30px;
       font-weight: bold;
       margin-bottom: 10px;
     }
@@ -376,6 +376,10 @@
         font-size: 18px;
       }
 
+      .typewriter-container p{
+        font-size: 16px;
+      }
+
       .buttons-container {
         flex-direction: column;
         align-items: center;
@@ -404,6 +408,10 @@
       .pfp {
         width: 150px;
         height: 150px;
+      }
+
+      .typewriter-container p{
+        font-size: 16px;
       }
 
       .main-title {
@@ -435,15 +443,15 @@
   <section class="hero" id="hero">
     <img src="imgs/IMG_4522.JPG" alt="Profile picture" class="pfp">
 
-    <div id="typewriter-container">
+    <div id="intro-container">
       <p>Hi, I'm Sakiyah</p>
-      <p>Computer Science student | Frontend Developer | AI enthusiast</p>
+      <p id="typewriter"> welcome to my portfolio 🙋🏾‍♀️</p>
     </div>
 
     <div class="buttonsabout">
       <button class="button-49" onclick="scrollToSection('about')">About Me</button>
       <button class="button-49" onclick="scrollToSection('projects')">Projects</button>
-      <a href="Resume.pdf" target="_blank"><button class="button-49">Resume</button></a>
+      <a href="imgs/SakiyahwinstonResume205.pdf" target="_blank"><button class="button-49">Resume</button></a>
       <a href="AImode.html"><button class="button-49 ai-mode">🤖 AI Mode</button></a>
     </div>
   </section>
@@ -455,20 +463,64 @@
       <h2><i class="fas fa-user-circle"></i> About Me</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>Hi! I'm Sakiyah Winston, a passionate Computer Science student with a love for creating innovative digital
-            solutions. I specialize in frontend development and have a growing interest in artificial intelligence.</p>
-          <br>
-          <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
-            learning about the latest developments in AI and machine learning.</p>
+          <p>
+            Hey there, 
+            <br>
+            <br>
+            My name is Sakiyah Winston, and I am a senior Computer Science majot Conitive Science Minor, at SUNY Oswego. 
+            While at Oswegoe, I have been able to hone my skills and abilities throughout my coursework. As I am looking to graduate
+            in May 2026, I am excited to find new opportunities that will allow me to grow within CS.
+            <br>
+            <br>
+            Currently, I am looking for any positions, involved in softwere development. I have the most of my experience in front-end development,
+            but I would love to expand my knowledge in back-end development as well.I alspo have strong passions in Artificle Intelligence and Machine Learning.
+            I am always looking for ways to incorporate AI into my projects, such as the AI mode for this project. Check it out🫵🏾
+           <br>
+           <br>
+            I am thrilled to collaborate in a team setting while also managing my time independently. Throughout my time at SUNY, I
+            have become not only a better programmer but also engaged with my soft skills.
+            
+            Please take a look around my page and connect with me. I am excited to hear from you.
+   
         </div>
         <div class="skills-section">
-          <h3 style="color: #4f9b66; margin-bottom: 15px;">Skills & Technologies</h3>
+          <h3 style="color: #4f9b66; margin-bottom: 15px;">Skills & Technologies i've used/learned:</h3>
+
+          <p style="color: beige; margin-top: 30px;">
+            Frontend development:
+          </p>
           <div class="skills-list">
             <div class="skill-item">JavaScript</div>
-            <div class="skill-item">Python</div>
             <div class="skill-item">HTML/CSS</div>
-            <div class="skill-item">Git</div>
+            <div class="skill-item">Three.js</div>
+            <div class="skill-item">React</div>
           </div>
+
+          <p style="color: beige; margin-top: 30px;">
+            AI/ML
+          </p>
+          <div class="skills-list">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">TensorFlow</div>
+            <div class="skill-item">PyTorch</div>
+          </div>
+
+          <p style="color: beige; margin-top: 30px;">
+            Other Technologies:
+          </p>
+          <div class="skills-list">
+            <div class="skill-item">Git</div>
+            <div class="skill-item">C</div>
+            <div class="skill-item">Java</div>
+          </div>
+
+
+
+          <div style="margin-top: 30px;">Hire Me: <a href="https://www.linkedin.com/in/sakiyah-winston" target="_blank" class="contact-link" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            </a></div>
+
+
         </div>
       </div>
     </section>
@@ -488,6 +540,7 @@
           <div class="project-tech">
             <span class="tech-tag">HTML/CSS</span>
             <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Git</span>
             <span class="tech-tag">Responsive Design</span>
           </div>
         </div>
