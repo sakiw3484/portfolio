@@ -291,6 +291,8 @@
       transition: all 0.3s ease;
     }
 
+
+
     .skill-item:hover {
       background: #205a31;
       transform: scale(1.05);
@@ -496,7 +498,12 @@
             Frontend development:
           </p>
           <div class="skills-list">
-            <div class="skill-item">JavaScript</div>
+           <div class="SkillItem-Popup" onclick="skillPopup()">
+            <div class="skill-item">Python</div>
+            <span class="popuptext" id="myPopup"></span>
+          </div> 
+
+           <div class="skill-item">JavaScript</div>
             <div class="skill-item">HTML/CSS</div>
             <div class="skill-item">Three.js</div>
             <div class="skill-item">React</div>
@@ -641,6 +648,12 @@
       section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(section);
     });
+
+    //skill item popup
+    function skillPopup() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
   </script>
 </body>
 
