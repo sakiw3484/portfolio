@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Document</title>
+    <title>SakiyahWinston.dev</title>
 
     <style>
         *{
@@ -31,14 +31,14 @@
             height: 75px;
             width: 90vw;
             max-width: 1200px;
-            color: black;
+            color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 40px;
             z-index: 1000;
             border-radius: 50px;   
-            border: 1px, solid, rgb(0, 0, 0);
+            border: 1px, solid, rgb(255, 255, 255);
             background: transparent;
         }
 
@@ -275,7 +275,7 @@
         </div>
        
             <div class="hero">
-                <img src="imgs/profilePic.JPG" />
+                <img src="imgs/profilePic.JPG"  loading="lazy"/>
                 <h1>Sakiyah Winston</h1>
                 <div style=" columns: 1; gap: 15px; justify-content: center;">
                     <h3 onclick="scrollToSection('about')">About</h3>
@@ -286,58 +286,76 @@
                 </div>
 
             </div>
-           
-    
- 
+               
+            <section class="about" id="about">
+                <div class="content-wrapper">
+                    <h2>About Me</h2>
+                    <br>
+            
+                    <strong>Education:</strong>
+                    <p>
+                        Senior at SUNY Oswego<br>
+                        Graduating: December 2026<br>
+                        Major: Computer Science<br> 
+                        Minor: Cognitive Science
+                        <br><br>
+            
+                        <strong>Interests:</strong>
+                        <br>
+                        Programming: I enjoy writing code. While I have a strong foundation in web development, I am still exploring
+                        different areas of software engineering to find my favorite field. I enjoy building systems and creating
+                        functional, helpful software with clean and maintainable code.
+                        <br><br>
+            
+                        Cybersecurity: I believe in a safe and secure internet and want to be a part of that. My dream job is to
+                        become an ethical hacker who helps protect people online and combats cybercrime. I am currently using
+                        HackerRank to advance my cybersecurity and programming skills.
+                        <br><br>
+            
+                        AR/VR: Although I have limited experience, I believe in a future where AR glasses can explain and provide
+                        information about the world around you. Imagine people playing Fortnite with their friends in virtual
+                        reality. Currently, I am exploring open-source AR/VR projects and technologies to learn more about the
+                        field.
+                        <br><br>
 
-    <section class="about" id="about">
-        <div class="content-wrapper">
-            <h2>About</h2>
-            <p>
-                Hello I'm Sakiyah, <br>
-                I am a Junior Computer Science major at SUNY Oswego, minoring in Cognitive Science, with a deep passion for building
-                software that augments human potential. My academic focus lies at the intersection of Artificial Intelligence and
-                Human-Computer Interaction, and I am particularly fascinated by the potential of Augmented Reality.
-                <br>
-                While I have a strong foundation in web development, demonstrated by my personal portfolio project which features a
-                custom AI chatbot, I am eager to apply my skills and curiosity toward more advanced AI and interactive systems.
-                <br>
-                I am currently seeking a Software Development internship for Summer 2026 and would love to connect with professionals
-                and peers to discuss innovative projects, emerging technologies, and potential opportunities.
-            </p>
-
-        </div>
-    
-    </section>
+                        I am currently seeking more experience in technology and enjoy connecting with professionals and peers to
+                        discuss innovative projects, emerging technologies, and potential opportunities.
+                    </p>
+                </div>
+            </section>
+            
 
     <section class="projects" id="projects">
         <div class="content-wrapper">
-            <h2>Projects</h2>
+            <h2>Projects 🚧</h2>
             <div class="project-lis">
+                
                 <div class="popup" onclick="projectPopup('popup1')">
-                ➤ tic tac toe game ~ java
+                ➤ BattleShip(Game Dev, Networking)
                 <span class="popuptext" id="popup1">
-                     <p> A simple tic tac toe game built in java using swing for the GUI.</p>
-                    <br>
-                    <p>Years ago, probably in high school, I was bored and trying to get better at coding so I built this classic game
-                        implementation. It helped me understand object-oriented programming and GUI development.</p>
+                     <p>come back later </p>
+                    
                      <br>
                     <button onclick="window.open('//github.com/sakiw3484')"> view on GitHub</button>
                 </span>
                 </div>
-                <div class="popup" onclick="projectPopup('popup2')">
-                    ➤ Personal Portfolio ~html, css, javascript 
-                    <span class="popuptext" id="popup2">
-                        <p> A simple tic tac toe game built in java using swing for the GUI.</p>
-                        <br>
-                        <p>Years ago, probably in high school, I was bored and trying to get better at coding so I built this classic game
-                            implementation. It helped me understand object-oriented programming and GUI development.</p>
-                        <br>
-                        <button onclick="window.open('//github.com/sakiw3484')"> view on GitHub</button>
-                        </span>
-                </div>
-                </div>
 
+
+                <!--
+                    <div class="popup" onclick="projectPopup('popup2')">
+                        ➤ Personal Portfolio ~html, css, javascript 
+                        <span class="popuptext" id="popup2">
+                            <p> A simple tic tac toe game built in java using swing for the GUI.</p>
+                            <br>
+                            <p>Years ago, probably in high school, I was bored and trying to get better at coding so I built this classic game
+                                implementation. It helped me understand object-oriented programming and GUI development.</p>
+                            <br>
+                            <button onclick="window.open('//github.com/sakiw3484')"> view on GitHub</button>
+                            </span>
+                    </div>
+                -->
+               
+                </div>
             </div>
             
     </section>
